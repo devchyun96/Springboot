@@ -2,6 +2,10 @@ language: java
 jdk:
   - openjdk17
 
+before_install:
+  - wget https://github.com/shyiko/jabba/raw/master/install.sh && chmod +x install.sh
+  - ./install.sh
+  - jabba install adopt@1.17.0-1
 
 branches:
   only:
