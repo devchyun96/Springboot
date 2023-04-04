@@ -20,6 +20,7 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -57,6 +58,7 @@ jobs:
     - name: Show Current time
       run: echo "CurrntTime=&{{steps.current-time.outputs.formattedTime}}"
       shell: bash
+      
     - name: Generate deployment package
       run: |
         mkdir -p before-deploy
