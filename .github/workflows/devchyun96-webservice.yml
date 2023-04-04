@@ -57,8 +57,9 @@ jobs:
     - name: Show Current time
       run: echo "CurrntTime=&{{steps.current-time.outputs.formattedTime}}"
       shell: bash
+      
     - name: Generate deployment package
-      run: |
+      run:
         mkdir -p before-deploy
         cp scripts/*.sh before-deploy/
         cp appspec.yml before-deploy/
