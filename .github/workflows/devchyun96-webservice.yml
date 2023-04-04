@@ -61,7 +61,7 @@ jobs:
       run: echo "CurrntTime=&{{steps.current-time.outputs.formattedTime}}"
       shell: bash
       
-    - name: Generate deployment package # (final)
+    - name: Generate deployment package #
       run: |
         mkdir -p before-deploy
         cp scripts/*.sh before-deploy/
